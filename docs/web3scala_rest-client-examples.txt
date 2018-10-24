@@ -1,0 +1,81 @@
+---------------------------------------
+-- Postman                           --
+---------------------------------------
+
+----------------------------------------------------
+-- Http Resquest Examples:
+    web3scala-ethereum-integration
+----------------------------------------------------
+
+----------------------------------------------------
+1. blockNumber: GET - Get numbers of blocks
+----------------------------------------------------
+Method: GET
+Request URL: http://localhost:9010/api/blockNumbers
+response:
+        {"blockNumber":<number>}
+
+----------------------------------------------------
+2. mining: GET - Get if the client is mining
+----------------------------------------------------
+Method: GET
+Request URL: http://localhost:9010/api/mining
+response:
+        {"mining":true|false}
+
+----------------------------------------------------
+3. accounts: GET - get list accounts
+----------------------------------------------------
+Method: GET
+Request URL: http://localhost:9010/api/accounts
+response:
+        {
+            "accounts": [
+                "0xe332da24634d9704c0c52cdeb6b39eba80ee4de7",
+                "0x3a5f418b874c9f34fef9171b0b43d58cf3f4e3c7",
+                "0xae7308f702736530a079c1ae8991ca9452ff7cb3",
+                .
+                .
+                .
+            ]
+        }
+
+----------------------------------------------------
+4. balance: GET - get balance of a account
+----------------------------------------------------
+Method: GET
+Request URL: http://localhost:9010/api/balance/<account>
+response:
+        {
+            "balances": [
+                {
+                    "_1": "0x3a5f418b874c9f34fef9171b0b43d58cf3f4e3c7", <- account
+                    "_2": "5000" <- balance
+                }
+            ]
+        }
+
+----------------------------------------------------
+5. sendTransaction: GET - Send ether from one account to
+   another
+----------------------------------------------------
+Method: GET
+Request URL: http://localhost:9010/api/sendTransaction/<from>/<to>/<amount>
+response: The transaction hash, or the zero hash if the transaction
+          is not yet available
+
+----------------------------------------------------
+6. transactionCount: GET - get the number of transactions
+   made by the account
+----------------------------------------------------
+Method: GET
+Request URL: http://localhost:9010/api/transactionCount/<account>
+response:
+        {
+            "balances": [
+                {
+                    "_1": "0x3a5f418b874c9f34fef9171b0b43d58cf3f4e3c7", <- account
+                    "_2": "12" <- number of transactions
+                }
+            ]
+        }
