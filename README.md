@@ -1,4 +1,4 @@
-# web3scala-ethereum-integration-example
+# web3scala-ethereum-integration
 In this project has implemented an api rest that serves the user to
 communicate with a private network Ethreum using the library web3scala.
 ## 0. What do you need?
